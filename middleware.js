@@ -37,6 +37,9 @@ export default async function middleware(req) {
         return NextResponse.redirect(new URL('/mylist', req.nextUrl))
     }
 
+    if (path === "/" ){
+        return NextResponse.redirect(new URL('/login', req.nextUrl))
+    }
     
 
     const res = NextResponse.next()
@@ -45,5 +48,5 @@ export default async function middleware(req) {
 }
 
 export const config = {
-    matcher: ['/mylist', '/login', '/callback'],
+    matcher: ['/mylist', '/login', '/callback', '/', ],
 }
