@@ -56,7 +56,7 @@ const LayoutRight = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => 
             <div className="flex flex-col gap-9">
                 <div className="text-[0.75rem] flex justify-between">
                     <div className="text-[#666666] flex gap-1 items-center"><div className="w-[7px] h-[7px] bg-[#1E6A18]"></div>made with Listify</div>
-                    <div>{Today}</div>
+                    <div className="opacity-50">{Today}</div>
                 </div>
             </div>
         </div>

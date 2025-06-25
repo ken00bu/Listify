@@ -27,6 +27,12 @@ const TotalOutput = ({ dataTotalOutput, setDataTotalOutput, dataTop }) => {
         setDataTotalOutput(5)
     }
 
+    useEffect(()=>{
+        if (isTop){
+            setDataTotalOutput(5)
+        }
+    }, [isTop])
+
     const SliderOn = "w-40 h-12 bg-[#E0E0E0] border-2 border-[#BCBCBC] flex items-center justify-center rounded-lg"
     const SliderOff = "w-40 h-12 bg-[#E0E0E0] border-2 border-[#BCBCBC] flex items-center justify-center rounded-lg opacity-50"
 

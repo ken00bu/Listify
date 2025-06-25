@@ -148,7 +148,7 @@ const MyList = () => {
                 </div>
             </div>
         </div>
-        <div className="font-inter font-medium opacity-30" ><a href="https://www.instagram.com/rukuooghh/" target="_blank" rel="noopener noreferrer"> Made by Kenobu using React ✨ </a></div>
+        <div className="font-inter font-medium opacity-30" ><a href="https://muhammad-fikri.vercel.app/" target="_blank" rel="noopener noreferrer"> Made by Kenobu using React ✨ </a></div>
         </div>
         
     );

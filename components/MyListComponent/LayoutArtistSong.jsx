@@ -42,7 +42,7 @@ const LayoutArtistSong = ({ dataTracks, dataArtist, dataRange, Today }) => {
     return (
         <div id="Layout Right" className=" flex flex-col justify-between h-full w-full">
                     <div className="w-full ">
-                        <h1 className="font-extrabold text-[2.7rem] leading-[3rem] mt-7">My Top List, <br></br> { !dataRange ? "RangeNull" : (dataRange.value === "Last 4 Weeks" ? "Last 4 Week" : dataRange.value) }</h1>
+                        <h1 className="font-extrabold text-[2.7rem] leading-[3rem] mt-7">My Top List, <br></br> { !dataRange ? "RangeNull" : dataRange.value }</h1>
                     </div>
                     <div className="flex flex-col gap-9">
                         <div className="w-full flex justify-between gap-3" >
@@ -61,7 +61,7 @@ const LayoutArtistSong = ({ dataTracks, dataArtist, dataRange, Today }) => {
                         </div>
                         <div className="text-[0.75rem] flex justify-between">
                             <div className="text-[#666666] flex gap-1 items-center"><div className="w-[7px] h-[7px] bg-[#1E6A18]"></div>made with Listify</div>
-                            <div>{Today}</div>
+                            <div className="opacity-50">{Today}</div>
                         </div>
                     </div>
                 </div>

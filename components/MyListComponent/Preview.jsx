@@ -1,7 +1,5 @@
 import LayoutRight from "./LayoutRight"
 import LayoutLeft from "./LayoutLeft"
-import LayoutSong from "./LayoutSong"
-import LayoutArtist from "./LayoutArtist"
 import LayoutArtistSong from "./LayoutArtistSong"
 import LayoutMany from "./LayoutMany"
 

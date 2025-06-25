@@ -67,7 +67,7 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
                             <div className="flex justify-end w-1/12"> {INDEX} </div>
                             <div className="w-11/12"> 
                                 <div> 
-                                    <div className="truncate w-full w-24"> {HEAD} </div>
+                                    <div className="truncate w-full w-[90px]"> {HEAD} </div>
                                     <div className="font-normal opacity-50 "> {CAPTION} </div>
                                 </div> 
                             </div>
@@ -96,7 +96,7 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
                 <div className="flex flex-col gap-9">
                     <div className="text-[0.75rem] flex justify-between">
                         <div className="text-[#666666] flex gap-1 items-center"><div className="w-[7px] h-[7px] bg-[#1E6A18]"></div>made with Listify</div>
-                        <div>{Today}</div>
+                        <div className="opacity-50">{Today}</div>
                     </div>
                 </div>
             </div>
