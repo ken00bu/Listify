@@ -38,6 +38,8 @@ export async function GET(request) {
     console.log("STATE KAMU: ", STATE);
     console.log("STATE SERVER: ", SERVERSTATE);
 
+    
+
     if (STATE !== SERVERSTATE){
 
         if (SERVERSTATE === undefined){
@@ -50,7 +52,7 @@ export async function GET(request) {
         }
         
     } else {
-        CookieStore.delete('state')
+        
         console.log("state lu bener, lanjut ke token exchange");
         try {
             const Data = await fetch(`https://accounts.spotify.com/api/token`, {
