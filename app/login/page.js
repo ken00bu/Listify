@@ -1,7 +1,7 @@
 'use client'
 const Login = () => {
     const CLIENT_ID = 'a778f5b264b64f03824579b215ed237c';
-    const REDIRECT_URL = 'https://listify-eta.vercel.app/callback';
+    const REDIRECT_URL = 'http://127.0.0.1:3000/callback';
     const SCOPE = 'user-top-read user-read-recently-played user-read-playback-position';
     async function HandleLogin() {
 

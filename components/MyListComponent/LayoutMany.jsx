@@ -63,11 +63,11 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
 
                 return (
                     <div id="ITEM-CONTAINER" className="text-[0.7rem] font-normal" key={index}>
-                        <div className="flex justify-end gap-2 w-44 bg-red-500">
+                        <div className="flex justify-end gap-2">
                             <div className="flex justify-end w-1/12"> {INDEX} </div>
                             <div className="w-11/12"> 
                                 <div> 
-                                    <div className="truncate w-full w-[90px]"> {HEAD} </div>
+                                    <div className="truncate w-full w-24"> {HEAD} </div>
                                     <div className="font-normal opacity-50 "> {CAPTION} </div>
                                 </div> 
                             </div>

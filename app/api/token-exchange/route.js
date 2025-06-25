@@ -11,7 +11,7 @@ export async function GET(request) {
     const STATE = searchParams.get('state');
     const CLIENT_SECRET = "d11bc1463be84f639088f4f91e8a0ef2";
     const CLIENT_ID = "a778f5b264b64f03824579b215ed237c";
-    const REDIRECT_URL = "https://listify-eta.vercel.app/callback";
+    const REDIRECT_URL = "http://127.0.0.1:3000/callback";
     const SERVERSTATE = CookieStore.get('state')?.value;
 
 
@@ -63,7 +63,7 @@ export async function GET(request) {
             })
 
             if (!Data.ok){
-                return NextResponse.json({msg: `Gagal Mengambil Data ${Data}`}, {status: 401})
+                return NextResponse.json({msg: "Gagal Mengambil Data"}, {status: 401})
             }
             
             console.log("BERHASIL MENDAPATKAN DATA TOKEN");
