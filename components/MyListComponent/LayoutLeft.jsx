@@ -35,7 +35,7 @@ const LayoutLeft = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => {
                         <h5 className="text-[0.8rem] opacity-60 font-normal tracking-normal"> { CAPTION } </h5>
                     </div>
                     <div> 
-                        <img src={SRC} alt="" className="w-[3.3rem] rounded-full" /> 
+                        <img src={SRC} alt="" className="w-[3.3rem] h-[3.3rem] rounded-full" /> 
                     </div>
                 </div>
             )
