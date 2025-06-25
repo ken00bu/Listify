@@ -63,7 +63,7 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
 
                 return (
                     <div id="ITEM-CONTAINER" className="text-[0.7rem] font-normal" key={index}>
-                        <div className="flex justify-end gap-2">
+                        <div className="flex justify-end gap-2 w-44 bg-red-500">
                             <div className="flex justify-end w-1/12"> {INDEX} </div>
                             <div className="w-11/12"> 
                                 <div> 
