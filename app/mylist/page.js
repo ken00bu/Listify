@@ -12,6 +12,7 @@ import PilihRange from "@/components/MyListComponent/setting/option-setting-top/
 import InputNomor from "@/components/MyListComponent/setting/option-setting-top/offset-setting/InputNomor";
 import TotalOutput from "@/components/MyListComponent/setting/option-setting-top/offset-setting/TotalOutput";
 import PilihLayout from "@/components/MyListComponent/setting/option-setting-top/layout-setting/PilihLayout";
+import TemaSetting from "@/components/MyListComponent/setting/option-setting-top/tema-setting/TemaSetting";
 import DownloadButton from "@/components/MyListComponent/setting/option-download/DownloadButton"
 
 
@@ -32,6 +33,7 @@ const MyList = () => {
     const [ dataTotalOutput, setDataTotalOutput ] = useState(5)
     const [ isLayout, setIsLayout ] = useState(true)
     const [ DateNow, setDateNow ] = useState()
+    const [ tema, setTema ] = useState("gray")
 
     useEffect(() => {
 
@@ -117,7 +119,7 @@ const MyList = () => {
         <div className=" flex justify-center items-center font-inter"> 
             <div id="container-buat-ketengah">
                 <div id="container-buat-elemen" className="flex gap-10 flex-col md:flex-row items-center justify-center pt-24 pb-24">
-                    <div className="zoom-[0.80] md:zoom-100 rounded-xl bg-red-600 h-full"> < Preview TopList={dataTop} Range={dataRange} Offset={dataNilaiOffset} TotalOutput={dataTotalOutput} Layout={dataLayout} DATA={Data} isLayout={isLayout} setIsLayout={setIsLayout} LayoutRef={PreviewLayout} Today={DateNow} /> </div>
+                    <div className="zoom-[0.80] md:zoom-100 rounded-xl h-full"> < Preview TopList={dataTop} Range={dataRange} Offset={dataNilaiOffset} TotalOutput={dataTotalOutput} Layout={dataLayout} DATA={Data} isLayout={isLayout} setIsLayout={setIsLayout} LayoutRef={PreviewLayout} Today={DateNow} tema={tema} setTema={setTema} /> </div>
                     <div id="container-buat-setting" className="bg-white w-[105%] rounded-3xl border-[1px] border-[#BABABA] p-4 flex flex-col gap-6 pt-8">
                         <div id="container-buat-atas" className="flex flex-col gap-3">
                             <h1 className="font-inter text-sm font-medium text-[#999999]"> Get My Top List </h1>
@@ -139,6 +141,12 @@ const MyList = () => {
                             <div className="flex flex-col gap-3">
                                 <h1 className="font-inter text-sm font-medium text-[#999999]"> Pilih Layout </h1>
                                 < PilihLayout setDataLayout={setDataLayout} isLayout={isLayout} />
+                            </div>
+                        </div>
+                        <div id="container-buat-tema">
+                            <div className="flex flex-col gap-3">
+                                <h1 className="font-inter text-sm font-medium text-[#999999]"> Pilih Tema </h1>
+                                <TemaSetting tema={tema} setTema={setTema} />
                             </div>
                         </div>
                         <div id="container-download-button">

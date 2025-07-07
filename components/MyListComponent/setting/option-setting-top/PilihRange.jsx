@@ -6,8 +6,8 @@ const Select = dynamic(() => import('react-select'), { ssr: false });
 const PilihRange = ({dataRange, setDataRange }) => {
 
     const options = [
-        { value: 'Last 4 Weeks', label: 'Last 4 Weeks' },
-        { value: 'Last 6 Months', label: 'Last 6 Months' },
+        { value: 'Last 4 Weeks', label: '4 Week' },
+        { value: 'Last 6 Months', label: '6 Month' },
         { value: 'Last Year', label: 'Last Year' }
     ]
 

@@ -1,4 +1,4 @@
-const LayoutArtistSong = ({ dataTracks, dataArtist, dataRange, Today }) => {
+const LayoutArtistSong = ({ dataTracks, dataArtist, dataRange, Today, tema, displayText }) => {
 
     if ( dataTracks && dataArtist ) {
         console.log(JSON.stringify(dataTracks))
@@ -42,7 +42,7 @@ const LayoutArtistSong = ({ dataTracks, dataArtist, dataRange, Today }) => {
     return (
         <div id="Layout Right" className=" flex flex-col justify-between h-full w-full">
                     <div className="w-full ">
-                        <h1 className="font-extrabold text-[2.7rem] leading-[3rem] mt-7">My Top List, <br></br> { !dataRange ? "RangeNull" : dataRange.value }</h1>
+                        <h1 className={`font-extrabold text-[2.6rem] leading-[3rem] mt-7 ${ tema !== `gray` && 'font-InstrumentSerif text-[3rem]'  }`}> { !dataRange ? "RangeNull" : ( displayText() ) } </h1>
                     </div>
                     <div className="flex flex-col gap-9">
                         <div className="w-full flex justify-between gap-3" >

@@ -1,4 +1,4 @@
-const LayoutLeft = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => {
+const LayoutLeft = ({ dataTracks, dataArtist, isArtist, dataRange, Today, tema, displayText }) => {
 
     const RenderArtist = ( Option ) => {
 
@@ -35,7 +35,7 @@ const LayoutLeft = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => {
                         <h5 className="text-[0.8rem] opacity-60 font-normal tracking-normal"> { CAPTION } </h5>
                     </div>
                     <div> 
-                        <div className="w-[3.3rem] h-[3.3rem] rounded-full overflow-hidden"><img src={SRC} alt="" className="w-full" /></div>
+                        <div className="w-[3.3rem] h-[3.3rem] rounded-full overflow-hidden"><img src={SRC} alt="" className="object-cover" /></div>
                     </div>
                 </div>
             )
@@ -47,7 +47,7 @@ const LayoutLeft = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => {
         <div id="Layout Left" className=" flex flex-col justify-between h-full w-full">
             <div id="Layout Left" className=" flex flex-col justify-between h-full w-full">
                 <div className="w-full flex flex-col gap-4">
-                    <h1 className="font-extrabold text-[2.6rem] leading-[3rem] mt-7"> { !dataRange ? "RangeNull" : (dataRange.value) }, <br></br> Top {isArtist ? "Artist" : "Song"} </h1>
+                    <h1 className={`font-extrabold text-[2.6rem] leading-[3rem] mt-7 ${ tema !== `gray` && 'font-InstrumentSerif text-[3rem]'  }`}> { !dataRange ? "RangeNull" : ( displayText() ) } </h1>
                     <div className="w-full flex flex-col gap-3" >
                         { RenderArtist( isArtist ? "Artist" : "Track" ) }
                     </div>

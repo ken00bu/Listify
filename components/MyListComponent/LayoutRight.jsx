@@ -1,4 +1,4 @@
-const LayoutRight = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => {
+const LayoutRight = ({ dataTracks, dataArtist, isArtist, dataRange, Today, tema, displayText }) => {
 
     const RenderArtist = ( Option ) => {
 
@@ -31,7 +31,7 @@ const LayoutRight = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => 
             return (
                 <div id="INI-CONTAINER-ITEM" className="flex items-center gap-3" key={index}>
                     <div> 
-                        <img src={SRC} alt="" className="w-[3.3rem] rounded-full" /> 
+                        <img src={SRC} alt="" className="w-[3.3rem] rounded-full object-cover" /> 
                     </div>
                     <div>
                         <h1 className="font-semibold text-[0.8rem] tracking-wide"> { HEAD } </h1>
@@ -48,7 +48,7 @@ const LayoutRight = ({ dataTracks, dataArtist, isArtist, dataRange, Today }) => 
     return (
         <div id="Layout Left" className=" flex flex-col justify-between h-full w-full">
             <div className="w-full flex flex-col gap-4">
-                <h1 className="font-extrabold text-[2.6rem] leading-[3rem] mt-7"> { !dataRange ? "RangeNull" : (dataRange.value) }, <br></br> Top {isArtist ? "Artist" : "Song"} </h1>
+                <h1 className={`font-extrabold text-[2.6rem] leading-[3rem] mt-7 ${ tema !== `gray` && 'font-InstrumentSerif text-[3rem]'  }`}> { !dataRange ? "RangeNull" : ( displayText() ) } </h1>
                 <div className="w-full flex flex-col gap-3" >
                     { RenderArtist( isArtist ? "Artist" : "Track" ) }
                 </div>

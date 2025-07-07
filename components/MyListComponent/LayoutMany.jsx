@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 
-const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
+const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today, tema, displayText }) => {
     
     const [ dataArtist, setArtist ] = useState()
     const [ dataTracks, setTracks ] = useState() 
@@ -83,7 +83,7 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today }) => {
         <div id="Layout Left" className=" flex flex-col justify-between h-full w-full">
             <div id="Layout Left" className=" flex flex-col justify-between h-full w-full">
                 <div className="w-full flex flex-col gap-4">
-                    <h1 className="font-extrabold text-[2.6rem] leading-[3rem] mt-7"> { !dataRange ? "RangeNull" : dataRange.value },<br></br> Top {isArtist ? "Artist" : "Song"} </h1>
+                    <h1 className={`font-extrabold text-[2.6rem] leading-[3rem] mt-7 ${ tema !== `gray` && 'font-InstrumentSerif text-[3rem]'  }`}> { !dataRange ? "RangeNull" : ( displayText() ) } </h1>
                     <div className="w-full flex flex gap-3" >
                         <div className="flex-1" id="KIRI">
                             {RenderMyItem(dataKiri)}
