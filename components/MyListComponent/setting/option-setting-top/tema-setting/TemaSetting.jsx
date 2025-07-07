@@ -7,7 +7,7 @@ const TemaSeting = ({ tema, setTema }) => {
     const MyTema = {
         "gray" : "tema/gray.svg",
         "goblin" : "tema/goblin.svg",
-        "melankolis" : "tema/melankolis.svg",
+        "melankolis" : "tema/melankolis.png",
         "hotfire" : "tema/hotfire.svg",
     }
 
