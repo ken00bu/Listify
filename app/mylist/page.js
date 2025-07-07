@@ -157,6 +157,7 @@ const MyList = () => {
             </div>
         </div>
         <div className="font-inter font-medium opacity-30" ><a href="https://muhammad-fikri.vercel.app/" target="_blank" rel="noopener noreferrer"> Made by Kenobu using React ✨ </a></div>
+        <div className="font-inter font-medium opacity-30" ><a href="https://instagram.com/nanashihasgone" target="_blank" rel="noopener noreferrer"> Background Image by Nanashi </a></div>
         </div>
         
     );
