@@ -9,8 +9,8 @@ export async function GET(request) {
     const {searchParams} = new URL(request.url);
     const CODE = searchParams.get('code');
     const STATE = searchParams.get('state');
-    const CLIENT_SECRET = "d11bc1463be84f639088f4f91e8a0ef2";
-    const CLIENT_ID = "a778f5b264b64f03824579b215ed237c";
+    const CLIENT_SECRET = process.env.CLIENT_SECRET
+    const CLIENT_ID = process.env.CLIENT_ID
     const REDIRECT_URL = "https://listify-eta.vercel.app/callback";
     const SERVERSTATE = CookieStore.get('state')?.value;
 

@@ -67,7 +67,7 @@ const LayoutMany = ({ DATA, isArtist, dataRange, totalOutput, Today, tema, displ
                             <div className="flex justify-end w-1/12"> {INDEX} </div>
                             <div className="w-11/12"> 
                                 <div> 
-                                    <div className="truncate w-24"> {HEAD} </div>
+                                    <div className={`truncate ${ Pilih === "Kanan" ? 'w-28' : 'w-24' }`}> {HEAD} </div>
                                     <div className="font-normal opacity-50 "> {CAPTION} </div>
                                 </div> 
                             </div>
