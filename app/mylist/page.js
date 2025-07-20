@@ -116,9 +116,9 @@ const MyList = () => {
 
     return (
         <div className="flex flex-col items-center justify-center mb-24">
-        <div className=" flex justify-center items-center font-inter"> 
-            <div id="container-buat-ketengah" className="flex gap-5 flex-row">
-                <div id="container-buat-elemen" className="flex gap-10 flex-col md:flex-row items-center justify-center pt-24 pb-24">
+        <div className=" flex justify-center items-center font-inter flex-col"> 
+            <div id="container-buat-ketengah">
+                <div id="container-buat-elemen" className="flex gap-10 flex-col md:flex-row items-center justify-center pt-24 pb-28">
                     <div className="zoom-[0.80] md:zoom-100 rounded-xl h-full"> < Preview TopList={dataTop} Range={dataRange} Offset={dataNilaiOffset} TotalOutput={dataTotalOutput} Layout={dataLayout} DATA={Data} isLayout={isLayout} setIsLayout={setIsLayout} LayoutRef={PreviewLayout} Today={DateNow} tema={tema} setTema={setTema} /> </div>
                     <div id="container-buat-setting" className="bg-white w-[105%] rounded-3xl border-[1px] border-[#BABABA] p-4 flex flex-col gap-6 pt-8">
                         <div id="container-buat-atas" className="flex flex-col gap-3">
@@ -147,6 +147,7 @@ const MyList = () => {
                             <div className="flex flex-col gap-3">
                                 <h1 className="font-inter text-sm font-medium text-[#999999]"> Pilih Tema </h1>
                                 <TemaSetting tema={tema} setTema={setTema} />
+                                <div className="font-inter text-sm font-normal text-[#999999] mt-2 opacity-70"><a href="https://instagram.com/nanashihasgone" target="_blank" rel="noopener noreferrer"> Background Image by </a><span className="text-blue-400 underline cursor-pointer">Nanashi</span> </div>
                             </div>
                         </div>
                         <div id="container-download-button">
@@ -155,12 +156,13 @@ const MyList = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <iframe className="border-spacing-3" src="https://open.spotify.com/embed/playlist/2PiZenDTiHPWkHLYDjojiG?utm_source=generator&theme=0" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div className="w-full flex flex-col gap-52">
+                <div className="w-full flex flex-col gap-3">
+                    <div className="font-inter text-sm font-medium text-[#999999] text-center">Check Out My PlayList! Thankyou for using my App <a className="cursor-pointer text-red-500 underline" href="https://muhammad-fikri.vercel.app/">-Kenobu</a> </div>
+                    <iframe className="border-spacing-3" src="https://open.spotify.com/embed/playlist/2PiZenDTiHPWkHLYDjojiG?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
-        <div className="font-inter font-medium opacity-30" ><a href="https://muhammad-fikri.vercel.app/" target="_blank" rel="noopener noreferrer"> Made by Kenobu using React ✨ </a></div>
-        <div className="font-inter font-medium opacity-30" ><a href="https://instagram.com/nanashihasgone" target="_blank" rel="noopener noreferrer"> Background Image by Nanashi </a></div>
         </div>
         
     );
